@@ -146,6 +146,7 @@ def gameData():
         return
 
     if (
+        print(json.dumps(data, indent=2, ensure_ascii=False))
         data['response'][0]['success']['dateVer'] != date_ver_
         or data['response'][0]['success']['dataVer'] != data_ver_
     ):
