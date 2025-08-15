@@ -140,7 +140,7 @@ def gameData():
         f'{server_addr_}/gamedata/top?appVer={app_ver_}&dataVer={data_ver_}&dateVer={date_ver_}', verify=False
     ).json()
     
-    print(json.dumps(data, indent=2, ensure_ascii=False))
+    # print(json.dumps(data, indent=2, ensure_ascii=False))
     
     if 'action' in data['response'][0]['fail'] and data['response'][0]['fail']['action'] == 'app_version_up':
         UpdateAppVer(data['response'][0]['fail']['detail'].replace('\r\n', ''))
